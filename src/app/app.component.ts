@@ -39,7 +39,7 @@ interface RollForwardRelation {
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  title = 'angular-entity-chart';
+  title = 'tax-chart';
   // Data example based on your input
   entityThreads: EntityThread[] = [
     { entity: 'Entity 1', thread: 'Thread 1', taxYear: 2022 },

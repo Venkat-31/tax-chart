@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'angular-entity-chart' title`, () => {
+  it(`should have the 'tax-chart' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-entity-chart');
+    expect(app.title).toEqual('tax-chart');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-entity-chart');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, tax-chart');
   });
 });

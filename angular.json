@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-entity-chart": {
+    "tax-chart": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-entity-chart",
+            "outputPath": "dist/tax-chart",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-entity-chart:build:production"
+              "buildTarget": "tax-chart:build:production"
             },
             "development": {
-              "buildTarget": "angular-entity-chart:build:development"
+              "buildTarget": "tax-chart:build:development"
             }
           },
           "defaultConfiguration": "development"
