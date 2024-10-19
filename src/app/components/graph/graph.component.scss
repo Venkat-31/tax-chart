@@ -1,0 +1,44 @@
+
+.x-grid line {
+    stroke: #a0a0a2;
+    stroke-opacity: 0.7;
+}
+
+.y-grid line {
+    stroke: #95a7b7;
+    stroke-opacity: 0.7;
+}
+.custom-tick text {
+    display: none;
+}
+.graph-container {
+    position: relative;
+}
+.checkbox-container {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 10px;
+    margin-top: 40px;
+    background-color: red;
+    vertical-align: top;
+    display: inline-block;
+    left: 27px;
+    & > div {
+        position: absolute;
+        text-wrap: nowrap;
+    }
+    .input-checkbox {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 3.5px;
+        margin-bottom: 3.5px;
+    }
+    .checkbox-label {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+#timeline {
+    display: inline-block;
+    margin: 0;
+}

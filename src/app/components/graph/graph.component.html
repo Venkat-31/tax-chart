@@ -1,0 +1,17 @@
+
+<div class="graph-container">
+  <div class="checkbox-container" id="domain-block">
+    <div *ngFor="let entity of uniqueEntityDomains" [ngStyle]="{'top.px': getCheckboxY(entity)}" >
+      <div style="vertical-align: middle;display: inline-block;">
+        <input
+            class="input-checkbox"
+            type="checkbox"
+            [checked]="isEntitySelected(entity)"
+            (change)="toggleEntity(entity)"
+        />
+        <span class="checkbox-label">{{ entity }}</span>
+        </div>
+    </div>
+  </div>
+  <figure id="timeline"></figure>
+</div>
