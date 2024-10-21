@@ -1,38 +1,39 @@
 <main class="main"></main>
-<form [formGroup]="graphForm">
-  <div formGroupName="view">
-    <label>
-      <input type="checkbox" formControlName="realTiering" />
-      Real Tiering
-    </label>
-    <label>
-      <input type="checkbox" formControlName="hypotheticalTiering" />
-      Hypothetical Tiering
-    </label>
-    <!-- <label>
-      <input type="checkbox" formControlName="realRoleForward" />
-      Real Role Forward
-    </label>
-    <label>
-      <input type="checkbox" formControlName="hypotheticalRoleForward" />
-      Hypothetical Role Forward
-    </label> -->
-  </div>
-  <div>
-    <h4>Select Tax Years:</h4>
-    <div formArrayName="taxYears">
-      <div *ngFor="let year of uniqueYears; let i = index">
+<div class="filter-graph-group-container">
+  <form [formGroup]="graphForm" class='filter-container' >
+    <div formGroupName="view">
+      <p class="filter-heading">View</p>
+      <div class="label-group-container">
         <label>
-          <input type="checkbox" [formControlName]="i">
-          {{ year }}
+          <input type="checkbox" formControlName="realTiering" />
+          <span>Real Tiering</span>
         </label>
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 16 16"><title>Trade_Icons</title><polygon points="14.13 9.11 2.13 9.11 8.13 2.11 14.13 9.11" fill="#e7377b"/><rect x="6.12" y="8" width="4" height="6"  fill="#e7377b"/></svg>
+      </div>
+      <div class="label-group-container">
+        <label>
+          <input type="checkbox" formControlName="hypotheticalTiering" />
+          <span>Hypothetical Tiering</span>
+        </label>
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 16 16"><title>Trade_Icons</title><polygon points="14.13 9.11 2.13 9.11 8.13 2.11 14.13 9.11" fill="#eab005"/><rect x="6.12" y="8" width="4" height="6" fill="#eab005" /></svg>
       </div>
     </div>
-  </div>
-</form>
-<app-graph
-  [entityThreads]="entityThreads"
-  [threadRelations]="threadRelations"
-  [selectedYears]="selectedYears"
-></app-graph>
+    <div>
+      <p class="filter-heading">Tax Year</p>
+      <div formArrayName="taxYears">
+        <div *ngFor="let year of uniqueYears; let i = index" class="label-group-container">
+          <label>
+            <input type="checkbox" [formControlName]="i">
+            <span>{{ year }}</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
+  <app-graph
+    [entityThreads]="entityThreads"
+    [threadRelations]="threadRelations"
+    [selectedYears]="selectedYears"
+  ></app-graph>
+</div>
 <router-outlet />
